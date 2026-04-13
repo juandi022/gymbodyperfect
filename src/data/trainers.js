@@ -1,0 +1,38 @@
+export const trainersData = [
+  {
+    id: 1,
+    name: "Leonardo Sevilla",
+    role: "Entrenador",
+    age: "32 años",
+    bio: "Con más de 8 años de experiencia, Leonardo se ha especializado en transformaciones físicas radicales. Su enfoque combina la ciencia del deporte con la motivación psicológica para obtener resultados sostenibles.",
+    career: "Certificado internacionalmente en Hipertrofia, ex-competidor de culturismo y experto en biomecánica.",
+    img: ""
+  },
+  {
+    id: 2,
+    name: "Allan Varela",
+    role: "Instructor",
+    age: "28 años",
+    bio: "Allan es el experto en quema de grasa del equipo. Su energía en cada sesión es contagiosa, asegurando que cada cliente alcance su máximo potencial en cada repetición.",
+    career: "Especialista en entrenamiento funcional, Nutrición Deportiva y HIIT certificado por la NSCA.",
+    img: ""
+  },
+  {
+    id: 3,
+    name: "Ruben Aroca",
+    role: "Entrenador",
+    age: "40 años",
+    bio: "La disciplina es el pilar de Ruben. Ha dedicado su vida a entender cómo el cuerpo humano puede superar sus límites de fuerza natural mediante la constancia y la técnica perfecta.",
+    career: "Cinturón Negro 4to Dan en Taekwondo, experto en Powerlifting y acondicionamiento físico para combate.",
+    img: ""
+  },
+  {
+    id: 4,
+    name: "Oscar Aroca",
+    role: "Instructor de Taekwondo",
+    age: "20 años",
+    bio: "Oscar combina las artes marciales con el fitness moderno. Su metodología no solo entrena el cuerpo, sino también la mente y el espíritu de sus alumnos.",
+    career: "Cinturón Negro 4to Dan, múltiples veces campeón nacional y coach de alto rendimiento.",
+    img: ""
+  }
+];

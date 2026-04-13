@@ -1,0 +1,57 @@
+/* --- ANIMACIONES DE TEAM.JSX --- */
+
+/* 1. Animación de entrada (cuando carga la página) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team-container header, 
+.trainer-card-pro {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0; /* Empieza invisible para la animación */
+}
+
+/* Retraso para que las tarjetas carguen una por una (Efecto Cascada) */
+.trainer-card-pro:nth-child(1) { animation-delay: 0.2s; }
+.trainer-card-pro:nth-child(2) { animation-delay: 0.4s; }
+.trainer-card-pro:nth-child(3) { animation-delay: 0.6s; }
+.trainer-card-pro:nth-child(4) { animation-delay: 0.8s; }
+
+
+/* 2. Animación de Hover (al pasar el mouse) */
+.trainer-card-pro {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Movimiento suave y elástico */
+    cursor: pointer;
+}
+
+.trainer-card-pro:hover {
+    transform: translateY(-15px) scale(1.03); /* Se eleva y crece un poco */
+    border-color: #ffb800 !important; /* Resalta el borde en amarillo */
+    box-shadow: 0 20px 40px rgba(255, 184, 0, 0.2); /* Brillo amarillo suave */
+}
+
+/* Animación interna para la imagen al hacer hover */
+.trainer-card-pro img {
+    transition: transform 0.6s ease;
+}
+
+.trainer-card-pro:hover img {
+    transform: scale(1.1); /* La imagen hace un ligero zoom */
+}
+
+/* Animación para los iconos sociales */
+.trainer-card-pro .fab {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.trainer-card-pro .fab:hover {
+    transform: scale(1.3);
+    color: #fff !important; /* Cambia a blanco al hover */
+}

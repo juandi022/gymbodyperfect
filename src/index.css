@@ -1,13 +1,115 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* ==========================================
+   ESTILOS GENERALES
+========================================== */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#0a0a0a] text-white overflow-x-hidden min-h-screen flex flex-col;
+}
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSubtitle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes softGlow {
+  0% {
+    text-shadow: 0 0 0px #ffb800;
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(255, 184, 0, 0.53);
+  }
+}
+
+/* ==========================================
+   CLASES GLOBALES
+========================================== */
+.section-title {
+  @apply text-4xl font-black text-center text-white tracking-widest uppercase mb-4;
+  animation: fadeTitle 1s ease forwards;
+  opacity: 0;
+}
+
+.section-subtitle {
+  @apply text-2xl text-[#ffb800] text-center mb-10 px-5;
+  opacity: 0;
+  animation: fadeSubtitle 1.2s ease forwards;
+}
+
+.btn {
+  @apply inline-block bg-[#ffb800] text-black px-6 py-2 rounded font-semibold transition-all duration-300 hover:bg-amber-600 hover:shadow-lg hover:-translate-y-0.5;
 }

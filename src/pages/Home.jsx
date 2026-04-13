@@ -61,12 +61,12 @@ export default function Home() {
     <>
       {/* HERO */}
       <header className="hero-header-home" style={{
-  background: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${process.env.PUBLIC_URL}/img/fondodepantallagym.jpg) center/cover no-repeat`
+  background: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(/img/fondodepantallagym.jpg) center/cover no-repeat`
 }}>
         <section className="hero-content" style={{ textAlign: "center", padding: "0 20px" }}>
-          <h3>¡Bienvenido a Bodyperfectgym!</h3>
-          <h1>
-            El mejor lugar <span>Para estar en forma</span>
+          <h3 style={{ fontSize: "2rem", marginBottom: "20px", color: "#ffb800", animation: "fadeIn 1s ease forwards", opacity: 0, animationDelay: "0.2s" }}>¡Bienvenido a Bodyperfectgym!</h3>
+          <h1 style={{ fontSize: "4rem", fontWeight: "900", marginBottom: "30px", animation: "zoomIn 1.2s ease forwards", opacity: 0, animationDelay: "0.5s", lineHeight: "1.2" }}>
+            El mejor lugar <span style={{ color: "#ffb800", display: "block", fontSize: "3rem", fontWeight: "600", marginTop: "15px" }}>Para estar en forma</span>
           </h1>
           <a href="#servicios">
             <button className="hero-btn">Conoce nuestros servicios</button>
@@ -79,29 +79,10 @@ export default function Home() {
         <section className="services-section" id="servicios">
           <h2 className="section-title">SERVICIOS</h2>
           <p className="section-subtitle">Entrenamiento personalizado para todos los niveles.</p>
-          <div className="services-box">
-            <div className="service">
-              <div className="icon"><i className="fas fa-dumbbell"></i></div>
-              <h3>Entrenadores personales</h3>
-              <p>Contamos con los mejores instructores de la zona sur</p>
-            </div>
-            <div className="service">
-              <div className="icon"><i className="fas fa-users"></i></div>
-              <h3>Clases Grupales</h3>
-              <p>Próximamente</p>
-            </div>
-            <div className="service">
-              <div className="icon"><i className="fas fa-dumbbell"></i></div>
-              <h3>Instalaciones</h3>
-              <p>Contamos con más de 100 máquinas para que te puedas ejercitar</p>
-            </div>
-            <div className="service">
-              <div className="icon"><i className="fas fa-users"></i></div>
-              <h3>Clases de Taekwondo-ITF</h3>
-              <p>Contamos con clases de Taekwon-Do-ITF</p>
-              <p>Horarios: Lunes - Martes - Miércoles - Jueves</p>
-              <p>6pm - 7pm</p>
-            </div>
+          <div className="text-center mb-12">
+            <a href="/services">
+              <button className="services-btn">Ver todos los servicios</button>
+            </a>
           </div>
         </section>
 

@@ -40,15 +40,40 @@
 ========================================== */
 .services-section {
     padding: 70px 5%;
-    background: #ffffff;
+    background: #0a0a0a;
+    text-align: center;
 }
 
 .services-section .section-title {
-    color: #111;
+    color: white;
 }
 
 .services-section .section-subtitle {
-    color: #444;
+    color: #d1d1d1;
+}
+
+.services-btn {
+    margin-top: 30px;
+    padding: 14px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: #ffb800;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s ease;
+    opacity: 0;
+    animation: popIn 0.9s ease forwards;
+    animation-delay: 0.5s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.services-btn:hover {
+    background: #e6a200;
+    transform: scale(1.07);
+    box-shadow: 0 8px 25px rgba(255, 184, 0, 0.4);
 }
 
 .services-box {
