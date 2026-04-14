@@ -29,7 +29,7 @@ export default function Router() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/schedule" element={<Shedule />} />
+            <Route path="/shedule" element={<Shedule />} />
             <Route path="/taekwondo" element={<Taekwondo />} />
             <Route path="/class" element={<Class />} />
             <Route path="/machines" element={<Machines />} />

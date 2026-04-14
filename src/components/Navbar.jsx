@@ -40,6 +40,9 @@ export default function Navbar() {
         <Link to="/gallery" onClick={closeMenu} className="text-white font-medium text-lg hover:text-[#ffb800] transition-colors">
           Galería
         </Link>
+         <Link to="/shedule" onClick={closeMenu} className="text-white font-medium text-lg hover:text-[#ffb800] transition-colors">
+          Horarios
+        </Link>
         
         <a
           href="https://wa.me/50499015521?text=Hola!%20Quiero%20información%20sobre%20BodyPerfectGym"
