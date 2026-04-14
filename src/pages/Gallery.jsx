@@ -3,7 +3,6 @@ import React from 'react';
 const Gallery = () => {
   const images = [
     "/img/imagenvision.jpg",
-  
     "/img/foto1.jpeg",
     "/img/foto2.jpeg",
     "/img/foto3.jpeg",

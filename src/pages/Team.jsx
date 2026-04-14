@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { trainersData } from '../data/trainers';
-import './Team.css';
+import './team.css';
 
 const Team = () => {
   const navigate = useNavigate();
