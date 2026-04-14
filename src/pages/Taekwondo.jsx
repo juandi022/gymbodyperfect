@@ -4,161 +4,115 @@ export default function Taekwondo() {
   return (
     <>
       {/* HERO */}
-      <header className="hero-header-tkd">
-        <section className="hero-content" style={{ textAlign: "center", padding: "0 20px" }}>
-          <h3>Escuela de Taekwon-DO ITF</h3>
-          <h1>
-            Gral. General Choi Hong Hi{" "}
-            <span>Más que una escuela, una enseñanza de vida</span>
-          </h1>
-        </section>
+      <header className="tkd-hero">
+        <span className="tkd-badge">🥋 Escuela de Taekwon-Do ITF</span>
+        <h1>Gral. Choi Hong Hi <span>Más que una escuela, una enseñanza de vida 🙏</span></h1>
+        <p className="tkd-hero-sub">Formando campeones desde 2019 en Choluteca, Honduras</p>
       </header>
 
       <main>
+        {/* STATS */}
+        <section className="tkd-stats">
+          {[
+            { n: "6",   l: "📅 Años de experiencia" },
+            { n: "40+", l: "👥 Alumnos inscritos"   },
+            { n: "4",   l: "🥋 Cinturones negros"   },
+          ].map(({ n, l }) => (
+            <div className="tkd-stat" key={l}>
+              <span>{n}</span>
+              <p>{l}</p>
+            </div>
+          ))}
+        </section>
+
         {/* HISTORIA */}
-        <section className="history-section" id="historia">
-          <div className="history-content">
-            <div className="history-img">
-              <div className="img-frame">
-                <img src="/img/imagentkd.jpg" alt="Historia de Taekwon-Do ITF" />
-              </div>
-              <div className="history-stats">
-                <div className="stat">
-                  <span className="stat-number">6</span>
-                  <span className="stat-label">Años de experiencia</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">40+</span>
-                  <span className="stat-label">Alumnos inscritos</span>
-                </div>
-                <div className="stat">
-                  <span className="stat-number">4</span>
-                  <span className="stat-label">Cinturones negros</span>
-                </div>
-              </div>
+        <section className="tkd-section" id="historia">
+          <div className="section-header">
+            <p className="label">📖 Nuestra historia</p>
+            <h2>¿Quiénes somos?</h2>
+            <p className="sub">De un sueño a representar a Honduras en el mundo 🌎</p>
+          </div>
+          <div className="tkd-history">
+            <div className="img-frame">
+              <img src="/img/historia.jpg" alt="Taekwondo ITF" />
             </div>
-
-            <div className="history-text">
-              <div className="timeline">
-                <div className="timeline-item">
-                  <div className="timeline-marker">
-                    <i className="fas fa-history"></i>
-                  </div>
-                  <div className="timeline-content">
-                    <h3>2019 - Un poco de historia...</h3>
-                    <p>
-                      En 2019 inició este proyecto de la escuela de Taekwon-Do ITF "General Choi
-                      Hong Hi". El nombre viene del fundador de este bello arte marcial coreano.
-                    </p>
-                    <p>
-                      La escuela cuenta con 4 cinturones negros certificados por la ITF y por la
-                      AOHT, garantizando la calidad y autenticidad de la enseñanza.
-                    </p>
-                    <p>
-                      Con 6 años de experiencia, la escuela ha luchado siempre por los primeros
-                      puestos a nivel nacional y ha exportado talentos a la selección nacional de
-                      Honduras.
-                    </p>
-                  </div>
+            <div className="tkd-timeline">
+              <div className="t-row">
+                <div className="t-dot">📅</div>
+                <div>
+                  <h4>2019 — El inicio</h4>
+                  <p>Inició la escuela "General Choi Hong Hi", nombrada en honor al fundador del Taekwon-Do ITF. Con 4 cinturones negros certificados por la ITF y la AOHT.</p>
                 </div>
-
-                <div className="timeline-item">
-                  <div className="timeline-marker">
-                    <i className="fas fa-trophy"></i>
-                  </div>
-                  <div className="timeline-content">
-                    <h3>Logros Internacionales</h3>
-                    <p>Nuestros alumnos han participado en competencias de talla internacional:</p>
-                    <ul className="achievements-list">
-                      <li><i className="fas fa-medal"></i> Campeonato Panamericano de Ocala 2019</li>
-                      <li><i className="fas fa-medal"></i> Copa Mundo de Argentina 2022</li>
-                      <li><i className="fas fa-medal"></i> Panamericano de Puerto Rico 2024</li>
-                      <li><i className="fas fa-medal"></i> Mundial de Jesolo, Italia</li>
-                    </ul>
-                  </div>
+              </div>
+              <div className="t-row">
+                <div className="t-dot">🏆</div>
+                <div>
+                  <h4>Logros internacionales</h4>
+                  <ul className="tkd-list">
+                    <li>🥇 Campeonato Panamericano — Ocala 2019</li>
+                    <li>🥇 Copa Mundo — Argentina 2022</li>
+                    <li>🥇 Panamericano — Puerto Rico 2024</li>
+                    <li>🥇 Mundial — Jesolo, Italia</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CLASES */}
-        <section className="classes-section" id="clases">
-          <h2 className="section-title">Clases de Taekwon-Do</h2>
-          <p className="section-subtitle">Horarios y programas disponibles</p>
-
-          <div className="classes-container">
-            <div className="class-card">
-              <div className="class-icon">
-                <i className="fas fa-users"></i>
-              </div>
-              <h3>Clases Regulares</h3>
-              <div className="class-schedule">
-                <p><i className="fas fa-calendar-alt"></i> Lunes a Jueves</p>
-                <p><i className="fas fa-clock"></i> 6:00 PM - 7:00 PM</p>
-              </div>
-              <p className="class-description">
-                Clases para todos los niveles, desde principiantes hasta avanzados.
-              </p>
-            </div>
-
-            <div className="class-card">
-              <div className="class-icon">
-                <i className="fas fa-graduation-cap"></i>
-              </div>
-              <h3>Exámenes de Grado</h3>
-              <div className="class-schedule">
-                <p><i className="fas fa-calendar-alt"></i> Cada 3 meses</p>
-                <p><i className="fas fa-clock"></i> Según programación</p>
-              </div>
-              <p className="class-description">
-                Evaluaciones oficiales para ascenso de cinturones.
-              </p>
-            </div>
+        {/* CLASES + INSTRUCTOR */}
+        <section className="tkd-section dark" id="clases">
+          <div className="section-header">
+            <p className="label">🗓️ Clases</p>
+            <h2>Horarios y equipo</h2>
           </div>
-        </section>
+          <div className="tkd-bottom">
+            <div className="tkd-classes">
+              {[
+                { icon: "👥", title: "Clases regulares",  schedule: "Lun–Jue · 6:00 PM – 7:00 PM", desc: "Para todos los niveles, desde principiantes hasta avanzados." },
+                { icon: "🎓", title: "Exámenes de grado", schedule: "Cada 3 meses · Según programación", desc: "Evaluaciones oficiales para ascenso de cinturones." },
+              ].map(({ icon, title, schedule, desc }) => (
+                <div className="tkd-class-card" key={title}>
+                  <div className="tkd-class-icon">{icon}</div>
+                  <h3>{title}</h3>
+                  <p className="tkd-schedule">🕐 {schedule}</p>
+                  <p>{desc}</p>
+                </div>
+              ))}
+            </div>
 
-        {/* INSTRUCTORES */}
-        <section className="instructors-section" id="instructores">
-          <h2 className="section-title">Nuestros Instructores</h2>
-          <p className="section-subtitle">Profesionales certificados por la ITF</p>
-
-          <div className="instructors-container">
-            <div className="instructor-card">
+            <div className="tkd-instructor">
               <div className="instructor-img">
-                <img src="/img/fotooscar.jpg" alt="Oscar Aroca" />
+                <img src="/img/historia.jpg" alt="Oscar Aroca" />
               </div>
               <h3>Oscar Aroca</h3>
-              <p className="instructor-rank">IV Dan - Instructor Jefe</p>
-              <div className="instructor-cert">
-                <i className="fas fa-certificate"></i>
-                <span>Certificado ITF Internacional</span>
-              </div>
-              <div className="instructor-social">
-                <a href="https://www.instagram.com/arocaaatkd" target="_blank" rel="noreferrer">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
+              <p className="rank">🥋 IV Dan — Instructor Jefe</p>
+              <p className="cert">🏅 Certificado ITF Internacional</p>
+              <a href="https://www.instagram.com/arocaaatkd" target="_blank" rel="noreferrer" className="insta-btn">
+                <i className="fab fa-instagram" /> Instagram
+              </a>
             </div>
           </div>
         </section>
 
         {/* BENEFICIOS */}
-        <section className="benefits-section" id="beneficios">
-          <h2 className="section-title">Beneficios del Taekwon-Do</h2>
-          <p className="section-subtitle">Más que un deporte, un estilo de vida</p>
-
-          <div className="benefits-container">
+        <section className="tkd-section" id="beneficios">
+          <div className="section-header">
+            <p className="label">✨ ¿Por qué practicarlo?</p>
+            <h2>Beneficios del Taekwon-Do</h2>
+            <p className="sub">Más que un deporte, un estilo de vida 🙌</p>
+          </div>
+          <div className="tkd-benefits">
             {[
-              { icon: "fa-heartbeat", title: "Salud Física", desc: "Mejora la resistencia, fuerza y flexibilidad. Desarrollo integral del cuerpo." },
-              { icon: "fa-brain", title: "Desarrollo Mental", desc: "Fomenta la concentración, disciplina y autocontrol. Mejora la confianza en uno mismo." },
-              { icon: "fa-hands-helping", title: "Valores Morales", desc: "Enseña respeto, humildad, perseverancia y espíritu indomable." },
-              { icon: "fa-shield-alt", title: "Defensa Personal", desc: "Técnicas efectivas de autodefensa aplicables en situaciones reales." },
-            ].map((b) => (
-              <div className="benefit-item" key={b.title}>
-                <i className={`fas ${b.icon}`}></i>
-                <h3>{b.title}</h3>
-                <p>{b.desc}</p>
+              { icon: "❤️",  title: "Salud física",      desc: "Mejora la resistencia, fuerza y flexibilidad del cuerpo." },
+              { icon: "🧠",  title: "Desarrollo mental",  desc: "Concentración, disciplina y confianza en uno mismo."       },
+              { icon: "🤝",  title: "Valores morales",    desc: "Respeto, humildad, perseverancia y espíritu indomable."    },
+              { icon: "🛡️", title: "Defensa personal",   desc: "Técnicas efectivas de autodefensa para situaciones reales."},
+            ].map(({ icon, title, desc }) => (
+              <div className="tkd-benefit" key={title}>
+                <span>{icon}</span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
               </div>
             ))}
           </div>

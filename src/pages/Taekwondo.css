@@ -1,369 +1,98 @@
-/* ==========================================
-   TAEKWONDO - HERO
-========================================== */
-.hero-header-tkd {
-    height: 70vh;
-    min-height: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
+:root {
+  --gold: #ffb800;
+  --gold-dark: #e6a200;
+  --bg: #0a0a0a;
+  --bg2: #111;
+  --bg3: #1a1a1a;
+  --border: #2a2a2a;
 }
 
-/* ==========================================
-   HISTORIA (reutilizada de About)
-========================================== */
-.history-section {
-    padding: 80px 5%;
-    background: #111;
-    text-align: center;
+/* HERO */
+.tkd-hero {
+  height: 70vh; min-height: 480px;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; padding: 72px 20px 0;
+  background: linear-gradient(160deg, #1a1a1a, #0a0a0a);
+  border-bottom: 2px solid var(--gold);
 }
-
-.history-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+.tkd-badge {
+  display: inline-block; background: rgba(255,184,0,0.12);
+  border: 1px solid rgba(255,184,0,0.35); color: var(--gold);
+  font-size: 12px; font-weight: 600; padding: 7px 18px;
+  border-radius: 999px; letter-spacing: 2px;
+  text-transform: uppercase; margin-bottom: 20px;
 }
+.tkd-hero h1 { font-size: clamp(28px, 5vw, 52px); font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 12px; }
+.tkd-hero h1 span { display: block; font-size: clamp(15px, 2vw, 20px); font-weight: 300; color: #aaa; margin-top: 10px; }
+.tkd-hero-sub { font-size: 14px; color: #666; }
 
-.history-img { width: 100%; }
-
-.img-frame {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 4px solid #ffb800;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+/* STATS BAR */
+.tkd-stats {
+  display: flex; justify-content: center; gap: 0;
+  background: var(--gold); padding: 28px 5%;
 }
+.tkd-stat { flex: 1; text-align: center; max-width: 200px; }
+.tkd-stat + .tkd-stat { border-left: 1px solid rgba(0,0,0,0.15); }
+.tkd-stat span { display: block; font-size: 36px; font-weight: 900; color: #000; }
+.tkd-stat p    { font-size: 13px; color: #000; opacity: .7; margin: 4px 0 0; }
 
-.img-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+/* SECCIONES */
+.tkd-section      { padding: 80px 5%; background: var(--bg2); }
+.tkd-section.dark { background: var(--bg); }
+.section-header { text-align: center; margin-bottom: 48px; }
+.label { font-size: 11px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; display: block; margin-bottom: 8px; }
+.tkd-section h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 900; color: #fff; margin-bottom: 10px; }
+.sub { font-size: 15px; color: #777; }
+
+/* HISTORIA */
+.tkd-history { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto; align-items: start; }
+.img-frame { border-radius: 18px; overflow: hidden; border: 3px solid var(--gold); aspect-ratio: 4/3; }
+.img-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.img-frame:hover img { transform: scale(1.04); }
+
+.tkd-timeline { background: var(--bg3); border-radius: 16px; padding: 28px; border-left: 3px solid var(--gold); display: flex; flex-direction: column; gap: 24px; }
+.t-row { display: flex; gap: 14px; align-items: flex-start; }
+.t-dot { font-size: 20px; min-width: 44px; height: 44px; background: rgba(255,184,0,0.12); border: 1px solid rgba(255,184,0,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.tkd-timeline h4 { font-size: 16px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.tkd-timeline p  { font-size: 14px; color: #bbb; line-height: 1.7; }
+.tkd-list { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.tkd-list li { font-size: 14px; color: #bbb; }
+
+/* CLASES + INSTRUCTOR */
+.tkd-bottom { display: grid; grid-template-columns: 1fr 280px; gap: 28px; max-width: 1000px; margin: 0 auto; align-items: start; }
+.tkd-classes { display: flex; flex-direction: column; gap: 18px; }
+.tkd-class-card { background: var(--bg3); border-radius: 16px; padding: 24px; border: 1px solid var(--border); transition: .3s; }
+.tkd-class-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.tkd-class-icon { font-size: 32px; margin-bottom: 12px; }
+.tkd-class-card h3 { font-size: 18px; color: #fff; font-weight: 700; margin-bottom: 8px; }
+.tkd-schedule { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+.tkd-class-card p { font-size: 13px; color: #888; line-height: 1.6; }
+
+.tkd-instructor { background: var(--bg3); border-radius: 16px; padding: 28px 20px; border: 1px solid var(--border); text-align: center; }
+.instructor-img { width: 110px; height: 110px; border-radius: 50%; border: 3px solid var(--gold); overflow: hidden; margin: 0 auto 16px; }
+.instructor-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tkd-instructor h3 { font-size: 18px; color: #fff; font-weight: 700; margin-bottom: 6px; }
+.rank { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
+.cert { font-size: 13px; color: #888; margin-bottom: 16px; }
+.insta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: #000; font-weight: 700;
+  font-size: 14px; padding: 10px 20px; border-radius: 8px;
+  text-decoration: none; transition: .25s;
 }
+.insta-btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
 
-.img-frame:hover img { transform: scale(1.05); }
+/* BENEFICIOS */
+.tkd-benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+.tkd-benefit { background: var(--bg3); border-radius: 16px; padding: 28px 20px; text-align: center; border: 1px solid var(--border); transition: .3s; }
+.tkd-benefit:hover { border-color: var(--gold); transform: translateY(-6px); }
+.tkd-benefit span { font-size: 36px; display: block; margin-bottom: 14px; }
+.tkd-benefit h3 { font-size: 16px; color: #fff; font-weight: 700; margin-bottom: 8px; }
+.tkd-benefit p  { font-size: 13px; color: #888; line-height: 1.6; }
 
-.history-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.stat { text-align: center; min-width: 150px; }
-
-.stat-number {
-    display: block;
-    font-size: 42px;
-    font-weight: 900;
-    color: #ffb800;
-    margin-bottom: 8px;
-}
-
-.stat-label {
-    font-size: 14px;
-    color: #aaa;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 600;
-}
-
-.history-text { text-align: left; }
-
-.timeline {
-    background: rgba(255,255,255,0.05);
-    padding: 40px;
-    border-radius: 20px;
-    border-left: 4px solid #ffb800;
-}
-
-.timeline-item {
-    display: flex;
-    gap: 25px;
-    margin-bottom: 30px;
-}
-
-.timeline-marker {
-    flex-shrink: 0;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #ffb800, #ff6b00);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    color: black;
-    box-shadow: 0 5px 15px rgba(255,184,0,0.3);
-}
-
-.timeline-content h3 {
-    font-size: 22px;
-    color: #ffb800;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.timeline-content p {
-    color: #ddd;
-    font-size: 16px;
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 15px;
-}
-
-.achievements-list { list-style: none; margin-top: 15px; }
-
-.achievements-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    color: #ccc;
-}
-
-.achievements-list li i { color: #ffb800; font-size: 14px; }
-
-/* ==========================================
-   CLASES
-========================================== */
-.classes-section {
-    padding: 80px 5%;
-    background: #0a0a0a;
-    text-align: center;
-}
-
-.classes-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.class-card {
-    width: 100%;
-    max-width: 350px;
-    background: #111;
-    border-radius: 20px;
-    padding: 35px 30px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-bottom: 4px solid transparent;
-    transition: all 0.3s ease;
-    margin-bottom: 30px;
-}
-
-.class-card:hover {
-    transform: translateY(-10px);
-    border-bottom: 4px solid #ffb800;
-}
-
-.class-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #ffb800, #ff6b00);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    color: black;
-    margin: 0 auto 25px;
-    box-shadow: 0 5px 15px rgba(255,184,0,0.3);
-}
-
-.class-card h3 {
-    font-size: 24px;
-    color: #ffb800;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.class-schedule {
-    background: rgba(255,184,0,0.1);
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.class-schedule p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    color: #ddd;
-}
-
-.class-schedule i { color: #ffb800; }
-
-.class-description { color: #ccc; font-size: 15px; line-height: 1.6; }
-
-/* ==========================================
-   INSTRUCTORES
-========================================== */
-.instructors-section {
-    padding: 80px 5%;
-    background: #111;
-    text-align: center;
-}
-
-.instructors-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.instructor-card {
-    width: 100%;
-    max-width: 300px;
-    background: #0a0a0a;
-    border-radius: 20px;
-    padding: 30px;
-    text-align: center;
-    transition: all 0.3s ease;
-    margin-bottom: 30px;
-}
-
-.instructor-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.instructor-img {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-    border: 6px solid #ffb800;
-    overflow: hidden;
-}
-
-.instructor-img img { width: 100%; height: 100%; object-fit: cover; }
-
-.instructor-card h3 {
-    font-size: 22px;
-    color: white;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.instructor-rank {
-    color: #ffb800;
-    font-size: 16px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.instructor-cert {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #aaa;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.instructor-cert i { color: #ffb800; }
-
-.instructor-social a {
-    display: inline-flex;
-    width: 40px;
-    height: 40px;
-    background: #111;
-    color: #ffb800;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.instructor-social a:hover {
-    background: #ffb800;
-    color: black;
-    transform: scale(1.15);
-}
-
-/* ==========================================
-   BENEFICIOS
-========================================== */
-.benefits-section {
-    padding: 80px 5%;
-    background: #0a0a0a;
-    text-align: center;
-}
-
-.benefits-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.benefit-item {
-    background: #111;
-    border-radius: 20px;
-    padding: 35px 25px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.benefit-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.benefit-item i {
-    font-size: 48px;
-    color: #ffb800;
-    margin-bottom: 20px;
-    display: block;
-}
-
-.benefit-item h3 {
-    font-size: 20px;
-    color: white;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.benefit-item p { color: #ccc; font-size: 15px; line-height: 1.6; }
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-@media (max-width: 991px) {
-    .timeline-item { flex-direction: column; gap: 15px; }
-
-    .timeline-marker { width: 50px; height: 50px; font-size: 20px; }
-}
-
-@media (max-width: 767px) {
-    .img-frame { height: 300px; }
-    .history-stats { flex-direction: column; gap: 25px; }
-    .timeline { padding: 25px; }
-}
-
-@media (max-width: 575px) {
-    .img-frame { height: 250px; }
-    .stat-number { font-size: 32px; }
-    .section-title { font-size: 28px; }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .tkd-history, .tkd-bottom { grid-template-columns: 1fr; }
+  .tkd-stats { gap: 0; }
 }
