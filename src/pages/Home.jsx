@@ -24,11 +24,6 @@ export default function Home() {
   const [form, setForm]         = useState({ name: "", email: "", comment: "" });
   const [stars, setStars]       = useState(5);
 
-  useEffect(() => {
-    // HashRouter usa rutas como #/home que no son selectores CSS válidos
-    // Los enlaces con href="#explore" y href="#comentarios" funcionan directamente
-  }, []);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.name || !form.comment) return;
@@ -63,16 +58,16 @@ export default function Home() {
         {/* NAV CARDS */}
         <section className="nav-cards" id="explore">
           {[
-            { href: "/Services",  icon: "🏋️", label: "Servicios",  desc: "Planes y equipos para todos los niveles" },
-            { href: "/About",     icon: "👥", label: "Nosotros",   desc: "Historia, misión y valores del gym"      },
-            { href: "/Taekwondo", icon: "🥋", label: "Taekwondo",  desc: "Clases ITF para todas las edades"        },
-          ].map(({ href, icon, label, desc }) => (
-            <a href={href} className="nav-card" key={label}>
+            { to: "/services",    icon: "🏋️", label: "Servicios",  desc: "Planes y equipos para todos los niveles" },
+            { to: "/about",       icon: "👥", label: "Nosotros",   desc: "Historia, misión y valores del gym"      },
+            { to: "/taekwondo",   icon: "🥋", label: "Taekwondo",  desc: "Clases ITF para todas las edades"        },
+          ].map(({ to, icon, label, desc }) => (
+            <Link to={to} className="nav-card" key={label}>
               <div className="nav-card-icon">{icon}</div>
               <h3>{label}</h3>
               <p>{desc}</p>
               <span className="nav-card-link">Ver más →</span>
-            </a>
+            </Link>
           ))}
         </section>
 
