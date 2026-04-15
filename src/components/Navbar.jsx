@@ -10,7 +10,7 @@ export default function Navbar() {
 
       {/* LOGO */}
       <Link to="/" onClick={closeMenu}>
-        <img src="/img/imagensinfondo.png" alt="Body Perfect Gym" className="h-14 w-auto" />
+        <img src="/gymbodyperfect/img/imagensinfondo.png" alt="Body Perfect Gym" className="h-14 w-auto" />
       </Link>
 
       {/* HAMBURGUESA — solo en móvil */}

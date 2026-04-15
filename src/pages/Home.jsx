@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <header className="hero" style={{ background: `linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%), url(/img/fondodepantallagym.jpg) center/cover no-repeat` }}>
+      <header className="hero" style={{ background: `linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 100%), url(/gymbodyperfect/img/fondodepantallagym.jpg) center/cover no-repeat` }}>
         <div className="hero-content">
           <span className="hero-badge">💪 BodyPerfect Gym</span>
           <h1>El mejor lugar <span>Para estar en forma 🏋️</span></h1>
@@ -88,7 +88,7 @@ export default function Home() {
               <div className="trainer-card" key={t.name}>
                 <div className="trainer-img-wrap">
                   <div className="trainer-img">
-                    <img src={`/img/${t.img}`} alt={t.name} />
+                    <img src={`/gymbodyperfect/img/${t.img}`} alt={t.name} />
                   </div>
                   {t.ig && (
                     <a href={t.ig} target="_blank" rel="noreferrer" className="trainer-ig">
@@ -120,7 +120,7 @@ export default function Home() {
                 <p className="comment-text">"{c.text}"</p>
                 <div className="comment-footer">
                   <div className="comment-avatar">
-                    <img src="/img/imagenicono.png" alt={c.name} />
+                    <img src="/gymbodyperfect/img//imagenicono.png" alt={c.name} />
                   </div>
                   <div>
                     <h4>{c.name}</h4>

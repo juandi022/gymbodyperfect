@@ -2,14 +2,14 @@ import React from 'react';
 
 const Gallery = () => {
   const images = [
-    "../img/imagenvision.jpg",
-    "../img/foto1.jpeg",
-    "../img/foto2.jpeg",
-    "../img/foto3.jpeg",
-    "../img/foto4.jpeg",
-    "../img/foto5.jpeg",
-    "/img/foto6.jpeg",
-    "/img/foto7.jpeg"
+    "/gymbodyperfect/img/imagenvision.jpg",
+    "/gymbodyperfect/img/foto1.jpeg",
+    "/gymbodyperfect/img/foto2.jpeg",
+    "/gymbodyperfect/img/foto3.jpeg",
+    "/gymbodyperfect/img/foto4.jpeg",
+    "/gymbodyperfect/img/foto5.jpeg",
+    "/gymbodyperfect/img/foto6.jpeg",
+    "/gymbodyperfect/img/foto7.jpeg"
   ];
 
   return (
