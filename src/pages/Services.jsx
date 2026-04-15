@@ -16,7 +16,7 @@ export default function Services() {
             <div className="p-8 flex flex-col flex-grow text-center">
               <h3 className="text-xl font-bold text-white mb-3">Entrenadores personales</h3>
               <p className="text-white mb-6 flex-grow">Contamos con los mejores instructores de la zona sur</p>
-              <a href="/team" className="btn">conoce más</a>
+              <a href="#/team" className="btn">conoce más</a>
             </div>
           </div>
           <div className="bg-[#111] rounded-lg overflow-hidden border-2 border-transparent hover:border-[#ffb800] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-[#ffb800]/20 flex flex-col h-full">
@@ -30,7 +30,7 @@ export default function Services() {
             <div className="p-8 flex flex-col flex-grow text-center">
               <h3 className="text-xl font-bold text-white mb-3">Clases Grupales</h3>
               <p className="text-white mb-6 flex-grow">Descubre nuestras clases grupales</p>
-              <a href="/class" className="btn">conoce más</a>
+              <a href="#/class" className="btn">conoce más</a>
             </div>
           </div>
           <div className="bg-[#111] rounded-lg overflow-hidden border-2 border-transparent hover:border-[#ffb800] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-[#ffb800]/20 flex flex-col h-full">
@@ -44,7 +44,7 @@ export default function Services() {
             <div className="p-8 flex flex-col flex-grow text-center">
               <h3 className="text-xl font-bold text-white mb-3">Instalaciones</h3>
               <p className="text-white mb-6 flex-grow">Contamos con más de 100 máquinas para que te puedas ejercitar</p>
-              <a href="/machines" className="btn">conoce más</a>
+              <a href="#/machines" className="btn">conoce más</a>
             </div>
           </div>
           <div className="bg-[#111] rounded-lg overflow-hidden border-2 border-transparent hover:border-[#ffb800] transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg hover:shadow-[#ffb800]/20 flex flex-col h-full">
@@ -62,7 +62,7 @@ export default function Services() {
                 <p className="text-white text-sm mb-2">Horarios: Lunes - Martes - Miércoles - Jueves</p>
                 <p className="text-white text-sm mb-6">6pm - 7pm</p>
               </div>
-              <a href="/taekwondo" className="btn">conoce más</a>
+              <a href="#/taekwondo" className="btn">conoce más</a>
             </div>
           </div>
         </div>
