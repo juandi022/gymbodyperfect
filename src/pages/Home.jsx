@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 
 const TRAINERS = [
-  { img: "historia.jpg", name: "Leonardo Sevilla",  role: "Entrenador",               ig: "https://www.instagram.com/leosevillas"  },
-  { img: "historia.jpg", name: "Allan Varella",      role: "Instructor",               ig: "https://www.instagram.com/avarela2015"  },
-  { img: "historia.jpg", name: "Ruben Aroca",        role: "Entrenador",               ig: null                                      },
-  { img: "historia.jpg", name: "Oscar Aroca",        role: "Instructor Taekwondo-ITF", ig: "https://www.instagram.com/arocaaatkd"  },
+  { img: "leoimagen.jpg",  name: "Leonardo Sevilla",  role: "Entrenador",               ig: "https://www.instagram.com/leosevillas"  },
+  { img: "allanfoto.jpg",  name: "Allan Varella",      role: "Instructor",               ig: "https://www.instagram.com/avarela2015"  },
+  { img: "imagenpapa.jpg", name: "Ruben Aroca",        role: "Entrenador",               ig: null                                      },
+  { img: "fotooscar.jpg",  name: "Oscar Aroca",        role: "Instructor Taekwondo-ITF", ig: "https://www.instagram.com/arocaaatkd"  },
 ];
 
 const COMMENTS_INIT = [
@@ -121,7 +121,7 @@ export default function Home() {
                 <p className="comment-text">"{c.text}"</p>
                 <div className="comment-footer">
                   <div className="comment-avatar">
-                    <img src="/img/historia.jpg" alt={c.name} />
+                    <img src="/img/imagenicono.png" alt={c.name} />
                   </div>
                   <div>
                     <h4>{c.name}</h4>

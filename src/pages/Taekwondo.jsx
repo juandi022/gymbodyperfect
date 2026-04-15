@@ -34,7 +34,7 @@ export default function Taekwondo() {
           </div>
           <div className="tkd-history">
             <div className="img-frame">
-              <img src="/img/historia.jpg" alt="Taekwondo ITF" />
+              <img src="/img/fotooscar.jpg" alt="Taekwondo ITF" />
             </div>
             <div className="tkd-timeline">
               <div className="t-row">
@@ -83,7 +83,7 @@ export default function Taekwondo() {
 
             <div className="tkd-instructor">
               <div className="instructor-img">
-                <img src="/img/historia.jpg" alt="Oscar Aroca" />
+                <img src="/img/fotooscar.jpg" alt="Oscar Aroca" />
               </div>
               <h3>Oscar Aroca</h3>
               <p className="rank">🥋 IV Dan — Instructor Jefe</p>
