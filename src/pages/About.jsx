@@ -21,7 +21,7 @@ export default function About() {
           <div className="history">
             <div className="history-left">
               <div className="img-frame">
-                <img src="/img/imagengymfuera.jpg" alt="BodyPerfect Gym" />
+                <img src="/gymbodyperfect/img/imagengymfuera.jpg" alt="BodyPerfect Gym" />
               </div>
               <div className="stats">
                 <div className="stat">
@@ -82,7 +82,7 @@ export default function About() {
             <h3>Una promesa que cumplimos cada día</h3>
             <p>Trabajamos para crear un ambiente donde la superación personal, el apoyo comunitario y la excelencia sean nuestra carta de presentación. Cada miembro es parte de nuestra familia. 🙌</p>
             <div className="signature">
-              <img src="/img/firma.jpg" alt="Firma" className="sig-img" />
+              <img src="/gymbodyperfect/img/firma.jpg" alt="Firma" className="sig-img" />
               <div>
                 <p>La Familia Aroca</p>
                 <span>🏛️ Fundadores de BodyPerfect Gym</span>

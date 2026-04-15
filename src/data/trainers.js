@@ -6,7 +6,7 @@ export const trainersData = [
     age: "32 años",
     bio: "Con más de 8 años de experiencia, Leonardo se ha especializado en transformaciones físicas radicales. Su enfoque combina la ciencia del deporte con la motivación psicológica para obtener resultados sostenibles.",
     career: "Certificado internacionalmente en Hipertrofia, ex-competidor de culturismo y experto en biomecánica.",
-    img: "/img/leoimagen.jpg",
+    img: "/gymbodyperfect/img/leoimagen.jpg",
     ig: "https://www.instagram.com/leosevillas",
   },
   {
@@ -16,7 +16,7 @@ export const trainersData = [
     age: "28 años",
     bio: "Allan es el experto en quema de grasa del equipo. Su energía en cada sesión es contagiosa, asegurando que cada cliente alcance su máximo potencial en cada repetición.",
     career: "Especialista en entrenamiento funcional, Nutrición Deportiva y HIIT certificado por la NSCA.",
-    img: "/img/allanfoto.jpg",
+    img: "/gymbodyperfect/img/allanfoto.jpg",
     ig: "https://www.instagram.com/avarela2015",
   },
   {
@@ -26,7 +26,7 @@ export const trainersData = [
     age: "40 años",
     bio: "La disciplina es el pilar de Ruben. Ha dedicado su vida a entender cómo el cuerpo humano puede superar sus límites de fuerza natural mediante la constancia y la técnica perfecta.",
     career: "Cinturón Negro 4to Dan en Taekwondo, experto en Powerlifting y acondicionamiento físico para combate.",
-    img: "/img/imagenpapa.jpg",
+    img: "/gymbodyperfect/img/imagenpapa.jpg",
     ig: null,
   },
   {
@@ -36,7 +36,7 @@ export const trainersData = [
     age: "20 años",
     bio: "Oscar combina las artes marciales con el fitness moderno. Su metodología no solo entrena el cuerpo, sino también la mente y el espíritu de sus alumnos.",
     career: "Cinturón Negro 4to Dan, múltiples veces campeón nacional y coach de alto rendimiento.",
-    img: "/img/fotooscar.jpg",
+    img: "/gymbodyperfect/img/fotooscar.jpg",
     ig: "https://www.instagram.com/arocaaatkd",
   },
 ];
