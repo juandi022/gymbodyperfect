@@ -63,9 +63,9 @@ export default function Home() {
         {/* NAV CARDS */}
         <section className="nav-cards" id="explore">
           {[
-            { href: "/services",  icon: "🏋️", label: "Servicios",  desc: "Planes y equipos para todos los niveles" },
-            { href: "/about",     icon: "👥", label: "Nosotros",   desc: "Historia, misión y valores del gym"      },
-            { href: "/taekwondo", icon: "🥋", label: "Taekwondo",  desc: "Clases ITF para todas las edades"        },
+            { href: "/Services",  icon: "🏋️", label: "Servicios",  desc: "Planes y equipos para todos los niveles" },
+            { href: "/About",     icon: "👥", label: "Nosotros",   desc: "Historia, misión y valores del gym"      },
+            { href: "/Taekwondo", icon: "🥋", label: "Taekwondo",  desc: "Clases ITF para todas las edades"        },
           ].map(({ href, icon, label, desc }) => (
             <a href={href} className="nav-card" key={label}>
               <div className="nav-card-icon">{icon}</div>
