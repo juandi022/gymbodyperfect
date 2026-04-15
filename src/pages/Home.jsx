@@ -56,18 +56,18 @@ export default function Home() {
 
       <main>
         {/* NAV CARDS */}
-        <section className="nav-cards" id="explore">
+          <section className="nav-cards" id="explore">
           {[
-            { to: "/services",    icon: "🏋️", label: "Servicios",  desc: "Planes y equipos para todos los niveles" },
-            { to: "/about",       icon: "👥", label: "Nosotros",   desc: "Historia, misión y valores del gym"      },
-            { to: "/taekwondo",   icon: "🥋", label: "Taekwondo",  desc: "Clases ITF para todas las edades"        },
-          ].map(({ to, icon, label, desc }) => (
-            <Link to={to} className="nav-card" key={label}>
+            { href: "#/services",  icon: "🏋️", label: "Servicios",  desc: "Planes y equipos para todos los niveles" },
+            { href: "#/about",     icon: "👥", label: "Nosotros",   desc: "Historia, misión y valores del gym"      },
+            { href: "#/taekwondo", icon: "🥋", label: "Taekwondo",  desc: "Clases ITF para todas las edades"        },
+          ].map(({ href, icon, label, desc }) => (
+            <a href={href} className="nav-card" key={label}>
               <div className="nav-card-icon">{icon}</div>
               <h3>{label}</h3>
               <p>{desc}</p>
               <span className="nav-card-link">Ver más →</span>
-            </Link>
+            </a>
           ))}
         </section>
 
